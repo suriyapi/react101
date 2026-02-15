@@ -8,7 +8,7 @@ const Experience = () => {
     return (
         <div className="">
             <div className="text-primaryAccent font-medium">Experience</div>
-            <div className={`grid grid-cols-[25%_75%] bg-gray-200 rounded px-2 py-6 ${isMouseEnter ? "bg-gray-400" : ""}`}
+            <div className={`grid grid-cols-[25%_75%]  rounded px-2 py-6 transition-all ${isMouseEnter ? "bg-gray-400" : ""}`}
                 onMouseEnter={() => setIsMouseEnter(true)}
                 onMouseLeave={() => setIsMouseEnter(false)}
             >
