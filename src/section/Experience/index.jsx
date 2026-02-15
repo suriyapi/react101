@@ -10,7 +10,7 @@ import TitleLink from "../../components/TitleLink";
 import Material from "../../components/Material";
 import Description from "../../components/Description";
 import Tech from "../../components/Tech";
-import { data } from "../../contents/experience"
+
 
 const Experience = () => {
     const [isMouseEnter, setIsMouseEnter] = useState(false);
@@ -18,12 +18,6 @@ const Experience = () => {
     return (
         <div className="">
             <div className="text-primaryAccent font-medium">Experience</div>
-            {
-                data.map(() => {
-                    
-                })
-            }
-
             <div className={`grid grid-cols-[25%_75%]  rounded px-2 py-6 transition-all ${isMouseEnter['exp1'] ? "bg-gray-200" : ""}`}
                 onMouseEnter={() => setIsMouseEnter({ 'exp1': true })}
                 onMouseLeave={() => setIsMouseEnter({ 'exp1': false })}
