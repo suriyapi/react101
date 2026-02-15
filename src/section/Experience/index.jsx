@@ -7,6 +7,9 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import FormattedDate from "../../components/FomattedDate";
 import Picture from "../../components/Picture";
 import TitleLink from "../../components/TitleLink";
+import Material from "../../components/Material";
+import Description from "../../components/Description";
+import Tech from "../../components/Tech";
 const Experience = () => {
     const [isMouseEnter, setIsMouseEnter] = useState(false);
 
@@ -23,14 +26,14 @@ const Experience = () => {
                 </div>
                 <div className="grid gap-y-4">
                     <TitleLink isHighlight={isMouseEnter['exp1']} title="Fullstack" link="https://github.com/suriyapi/react101" />
-                    <div className="flex gap-4 text-xl">
-                        <a href="https://github.com/suriyapi/react101" target="_blank" className="hover:scale-110"><FontAwesomeIcon icon={faGithub} /></a>
-                        <a href="https://www.youtube.com/" target="_blank" className="hover:scale-110"><FontAwesomeIcon icon={faYoutube} /></a>
+                    <div className="flex gap-4 text-xl" >
+                        <Material icon={faGithub} link="https://github.com/suriyapi/react101" />
+                        <Material icon={faYoutube} link="https://www.youtube.com/@suriyapi" />
                     </div>
-                    <div className="text-sm">Designing and developing a sports data analysis system that scrapes data from various sports websites, processes it, and presents different profit-making possibilities in real-time for customers.</div>
-                    <div className="flex gap-4 text-sm">
-                        <div className={`rounded-md bg-primarySubcontent px-4 py-1 ${isMouseEnter['exp1'] ? "text-primaryAccent" : ""}`}>React</div>
-                        <div className={`rounded-md bg-primarySubcontent px-4 py-1 ${isMouseEnter['exp1'] ? "text-primaryAccent" : ""}`}>Next</div>
+                    <Description description="Designing and developing a sports data analysis system that scrapes data from various sports websites, processes it, and presents different profit-making possibilities in real-time for customers." />
+                    
+                    <div >
+                       <Tech isHighlight={isMouseEnter['exp1']} data={['React', 'Next']} />
                     </div>
                 </div>
             </div>
